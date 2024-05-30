@@ -11,6 +11,8 @@ from conftest import driver
 
 class TestFaqScooterRental:
 
+    @allure.title('Проверка секции со списком "Вопросы о важном"')
+    @allure.description('Проверить, что по клику на определенный вопрос, открывается соответсвующий ему ответ')
     @pytest.mark.parametrize("test_faq_id, actual_question, actual_answer, expected_question, expected_answer", [
                             (MainPageFAQSection.faq_click_question_id_0,
                                 MainPageFAQSection.get_text_question_for_faq_0, MainPageFAQSection.get_text_answer_for_faq_0,
