@@ -3,7 +3,7 @@ from locators.locators_main_page import LocatorsFAQ
 class TestUrls:
 
     SCOOTER_MAIN_PAGE = 'https://qa-scooter.praktikum-services.ru/'
-    SCOOTER_ORDER_PAGE = 'https://qa-scooter.praktikum-services.ru/order'
+    SCOOTER_ORDER_PAGE = f'{SCOOTER_MAIN_PAGE}order'
     DZEN_MAIN_PAGE = 'https://dzen.ru/?yredirect=true'
 
 
