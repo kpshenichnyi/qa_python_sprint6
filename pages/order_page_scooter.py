@@ -106,4 +106,11 @@ class OrderPageScooter(BasePage):
     def set_confirm_order(self):
         self.base_click_to_element(LocatorsOrderPage.LOCATOR_BUTTON_ORDER_YES)
 
+    @allure.step('Появление окна с сообщением, что "Заказ оформлен"')
+    def check_order_has_been_placed(self):
+        return self.base_get_text_of_element(LocatorsOrderPage.LOCATOR_TEXT_WINDOW_ORDER_PLACED)
 
+    @allure.step('Доступность кнопки "Посмотреть статус"')
+    def check_button_status_view_availability(self):
+        self.base_wait_until_element_is_clickable(LocatorsOrderPage.LOCATOR_BUTTON_ORDER_VIEW_STATUS)
+        return self.base_check_display_of_element(LocatorsOrderPage.LOCATOR_BUTTON_ORDER_VIEW_STATUS)

@@ -25,6 +25,10 @@ class BasePage:
     def base_find_element(self, LOCATOR):
         return self.driver.find_element(*LOCATOR)
 
+    @allure.step('Проверить отображение элемента')
+    def base_check_display_of_element(self, LOCATOR):
+        return self.driver.find_element(*LOCATOR).is_displayed()
+
     @allure.step('Дождаться загрузки элемента')
     def base_wait_visibility_of_element_located(self, LOCATOR, timeout = 5):
         return WDW(self.driver, timeout).until(EC.visibility_of_element_located(LOCATOR))

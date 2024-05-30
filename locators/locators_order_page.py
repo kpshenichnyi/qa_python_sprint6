@@ -43,4 +43,5 @@ class LocatorsOrderPage:
 
     LOCATOR_WINDOW_ORDER_SUCCESS = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']" #and text()='Хотите оформить заказ?']"
     LOCATOR_WINDOW_ORDER_CONFIRM = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"
-    LOCATOR_BUTTON_ORDER_VIEW_STATUS = By.XPATH, "//*[contains(@class,'Order_NextButton_')]//button[text()='Посмотерть статус']"
+    LOCATOR_TEXT_WINDOW_ORDER_PLACED = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ' and text()='Заказ оформлен']"
+    LOCATOR_BUTTON_ORDER_VIEW_STATUS = By.XPATH, "//button[contains(@class,'Button_Button_') and text()='Посмотреть статус']"

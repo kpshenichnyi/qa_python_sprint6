@@ -23,13 +23,9 @@ class TestOrderPageScooter:
         test_order_page.base_scroll_to_element(entry_point)
         test_order_page.base_click_to_element(entry_point)
         test_order_page.set_data_about_user(order_dataset)
-
         test_order_page.set_data_about_rental_period(order_dataset)
-        test_result_text = test_order_page.base_get_text_of_element(LocatorsOrderPage.LOCATOR_WINDOW_ORDER_SUCCESS)
-
-        assert "Хотите оформить заказ" in test_result_text
-
         test_order_page.set_confirm_order()
-        test_result_text = test_order_page.base_get_text_of_element(LocatorsOrderPage.LOCATOR_WINDOW_ORDER_CONFIRM)
+        test_result_text = test_order_page.check_order_has_been_placed()
+        test_status_view = test_order_page.check_button_status_view_availability()
 
-        assert "Заказ оформлен" in test_result_text
+        assert "Заказ оформлен" in test_result_text and test_status_view == True
