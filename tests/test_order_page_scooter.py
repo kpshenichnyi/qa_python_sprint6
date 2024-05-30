@@ -1,6 +1,5 @@
 import pytest
 import allure
-
 from pages.base_page import BasePage
 from pages.order_page_scooter import OrderPageScooter
 from pages.main_page_scooter import MainPageScooter
@@ -27,5 +26,4 @@ class TestOrderPageScooter:
         test_order_page.set_confirm_order()
         test_result_text = test_order_page.check_order_has_been_placed()
         test_status_view = test_order_page.check_button_status_view_availability()
-
         assert "Заказ оформлен" in test_result_text and test_status_view == True

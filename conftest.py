@@ -6,10 +6,7 @@ from data import TestUrls
 @pytest.fixture
 def driver():
     driver = webdriver.Firefox()
-    # driver = webdriver.Chrome()
     driver.maximize_window()
     driver.get(TestUrls.SCOOTER_MAIN_PAGE)
-
     yield driver
-
     driver.quit()

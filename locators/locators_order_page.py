@@ -22,7 +22,7 @@ class LocatorsOrderPage:
     LOCATOR_FIELD_DATE_START = By.CSS_SELECTOR, "input[placeholder='* Когда привезти самокат']"
     # Выбор даты поставки самоката = текущая дата
     LOCATOR_FIELD_DATE_START_DAY_1 = By.XPATH, "//div[contains(@class, 'react-datepicker__day--today')]"
-    # Выбор даты поставки самоката = текущая дата
+    # Выбор даты поставки самоката = 31.05
     LOCATOR_FIELD_DATE_START_DAY_2 = By.XPATH, "//div[@class='react-datepicker__day react-datepicker__day--031']"
     # Поле со сроком поставки самоката
     LOCATOR_FIELD_RENT_TIME = By.XPATH, "//div[text()='* Срок аренды']"
@@ -41,7 +41,9 @@ class LocatorsOrderPage:
     # Кнопка подтверждения заказа
     LOCATOR_BUTTON_ORDER_YES = By.XPATH, "//button[text()='Да']"
 
-    LOCATOR_WINDOW_ORDER_SUCCESS = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']" #and text()='Хотите оформить заказ?']"
+    # Окошко оформления заказа
     LOCATOR_WINDOW_ORDER_CONFIRM = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"
+    # Текст с сообщением об успешном оформлении заказа
     LOCATOR_TEXT_WINDOW_ORDER_PLACED = By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ' and text()='Заказ оформлен']"
+    # Кнопка с доступом до страницы с просмотром статуса заказа
     LOCATOR_BUTTON_ORDER_VIEW_STATUS = By.XPATH, "//button[contains(@class,'Button_Button_') and text()='Посмотреть статус']"

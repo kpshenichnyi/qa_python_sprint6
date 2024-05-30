@@ -19,7 +19,6 @@ class LocatorsMainPageScooter:
 class LocatorsFAQ:
     # Заголовок секции 'Вопросы о важном'
     LOCATOR_HEADER_SECTION_QA = By.XPATH, "//div[text()='Вопросы о важном']"
-
     # Вопрос с идентификатором 0
     LOCATOR_QUESTION_0 = (By.XPATH, "//div[@id = 'accordion__heading-0']")
     # Ответ на вопрос с идентификатором 0
@@ -52,4 +51,3 @@ class LocatorsFAQ:
     LOCATOR_QUESTION_7 = By.XPATH, "//div[@id = 'accordion__heading-7']"
     # Ответ на вопрос с идентификатором 7
     LOCATOR_ANSWER_7 = By.XPATH, '//div[@id="accordion__panel-7"]/p'
-

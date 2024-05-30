@@ -1,13 +1,11 @@
-import time
 import pytest
 import allure
-
 from pages.base_page import BasePage
 from pages.main_page_scooter import MainPageScooter, MainPageFAQSection
 from locators.locators_main_page import LocatorsFAQ
 from data import TestDataFAQ
-
 from conftest import driver
+
 
 class TestFaqScooterRental:
 
@@ -43,13 +41,9 @@ class TestFaqScooterRental:
         test_page = MainPageFAQSection(driver)
         test_page.base_to_accept_cookies()
         test_page.faq_scroll_to_questions_answers()
-        # f'MainPageFAQSection.{test_faq_id}(test_page)'
         test_faq_id(test_page)
         text_actual_question = actual_question(test_page)
         text_actual_answer = actual_answer(test_page)
-
         assert text_actual_question == expected_question
         assert text_actual_answer == expected_answer
-
-
 

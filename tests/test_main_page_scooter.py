@@ -1,6 +1,5 @@
 import pytest
 import allure
-
 from pages.main_page_scooter import MainPageScooter
 from pages.order_page_scooter import OrderPageScooter
 from data import TestUrls
@@ -19,7 +18,6 @@ class TestMainPage:
         test_main_page.main_wait_for_load_page_title()
         test_expected_url = TestUrls.SCOOTER_MAIN_PAGE
         test_actual_url = test_main_page.base_get_current_url()
-
         assert test_actual_url == test_expected_url
 
     @allure.title('Клик по логотипу Яндекса открывает Дзен')
@@ -32,5 +30,4 @@ class TestMainPage:
         test_main_page.base_wait_for_open_page(TestUrls.DZEN_MAIN_PAGE)
         test_expected_url = TestUrls.DZEN_MAIN_PAGE
         test_actual_url = test_main_page.base_get_current_url()
-
         assert test_actual_url == test_expected_url
